@@ -1,9 +1,9 @@
 <?php
 
 $server     = 'localhost';
-$username   = 'root';
-$password   = 'Friday13th';
-$db         = 'language_learner';
+$username   = 'usramazeme';
+$password   = 'Am@Z3mE';
+$db         = 'mobileweb-amazeme';
 
 // create connection
 $conn       = mysqli_connect($server, $username, $password, $db);
