@@ -23,5 +23,5 @@ if (ini_get("session.use_cookies")) {
 // Destroy session
 session_destroy();
 
-header('Location: http://localhost:8888/languagelearner/login.php');
+header('Location: login.php');
 die();
