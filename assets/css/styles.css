@@ -1,0 +1,34 @@
+body {
+    width: 90%;
+    color: red;
+}
+
+.question-img {
+    display: block;
+    margin: 30px auto;
+    max-width: 65%;
+}
+
+#right-answer, #wrong-answer-first-time, #wrong-answer-second-time, #login-error, #account-created {
+    display: none;
+    padding: 5px;
+    border: solid 1px;
+    text-shadow: 0 0 0;
+}
+
+#wrong-answer-first-time, #wrong-answer-second-time, #login-error {
+    border-color: #ffa4a5;
+    background: #ffa4a5;
+}
+
+#right-answer, #account-created {
+    border-color: #beffbd;
+    background: #beffbd;
+}
+
+#statistics-box {
+    width: 100%;
+    font-size: 30px;
+    background: #dafffc;
+}
+
