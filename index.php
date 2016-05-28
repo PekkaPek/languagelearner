@@ -12,14 +12,19 @@
     <script src="assets/js/index_script.js"></script>
 </head>
 <body>
+
+    <!--- Index page -->
+    <!---            -->
     <div data-role="page" id="languages-page">
 
+        <!-- header -->
         <div data-role="header">
             <a href="#settings-page" data-icon="gear">Settings</a>
             <h1>Language learner</h1>
             <a href="logout.php" data-icon="power" class="ui-btn-right">Logout <?php echo $_SESSION['loggedInUser']; ?></a>
         </div>
 
+        <!-- content -->
         <div data-role="content">
             <?php include('messages.php'); ?>
             <h2>Start learning a language</h2>
@@ -27,12 +32,18 @@
             <a href="learn.php" data-role="button">Dutch</a>
             <a href="learn.php" data-role="button">Finnish</a>
         </div>
+
+        <!-- footer -->
         <div data-role="footer" data-position="fixed">
             testfooter
         </div>
-    </div>
+    </div> <!-- Index page ends -->
 
+    <!-- Settings page -->
+    <!--               -->
     <div data-role="page" id="settings-page">
+
+        <!-- header -->
         <div data-role="header">
             <div data-role="navbar">
                 <ul>
@@ -41,11 +52,13 @@
                 <h1>Settings</h1>
             </div>
         </div>
+
         <?php include('user_section.php'); ?>
-            <div data-role="content">
+
+        <!-- content -->
+        <div data-role="content">
                 <label for="seconds-between-images-slider">Time Between Images</label>
                 <input type="range" name="seconds-between-images-slider" id="seconds-between-images-slider" value="<?php include('get_time_between_images.php') ?>" min="0" max="10" data-highlight="true" />
-            </div>
             <fieldset data-role="controlgroup" id="audio-setting-radiobutton-group">
                 <legend>Play Audio Example</legend>
                 <?php include('get_audio_on.php'); // stored value: $play_audio_example?>
@@ -56,9 +69,14 @@
             </fieldset>
             <button id="settings-save">Save</button>
             <button id="settings-cancel">Cancel</button>
-            <div data-role="footer" data-position="fixed">
-                testfooter
-            </div>
-    </div>
+        </div>
+
+        <!-- footer -->
+        <div data-role="footer" data-position="fixed">
+            testfooter
+        </div>
+
+    </div><!-- Settings page ends -->
+
 </body>
 </html>
