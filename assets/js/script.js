@@ -7,6 +7,9 @@ $(document).ready(function () {
     var timeBetweenImages = getTimeBetweenImages();
     var answerTimes = 0;
 
+    var audioElement = document.createElement('audio');
+    audioElement.setAttribute('src', 'assets/audio/twang.mp3');
+
     $("#answer_btn").click(function (e) {
         // prevent submitting the form
         e.preventDefault();
@@ -17,6 +20,7 @@ $(document).ready(function () {
                 timeBetweenImages.done( function () {
                     /*** Right answer ***/
                     if (right_answer == $('#answer-txt').val()) {
+                        audioElement.play();
                         // frontend changes
                         $("#wrong-answer-first-time").show().hide();
                         $('#right-answer').show();
@@ -101,6 +105,8 @@ $(document).ready(function () {
         }
     } */
 
+
+
 });
 
 $("#statistics").on("swipe", changeStatistics);
@@ -126,6 +132,10 @@ $(window).on("orientationchange", function (e) {
             getUserId();
             $.mobile.changePage("#statistics", {transition: "slideup"});
     }
+});
+
+$('.question-img').on("taphold", function () {
+    $(this).hide(1000).show(1000);
 });
 
 
