@@ -34,9 +34,8 @@
         </div>
 
         <!-- footer -->
-        <div data-role="footer" data-position="fixed">
-            <h4>2016 &copy; Pekka Pekkonen</h4>
-        </div>
+        <?php include('footer.html'); ?>
+
     </div> <!-- Languages page ends -->
 
     <!-- Settings page -->
@@ -67,9 +66,7 @@
         </div>
 
         <!-- footer -->
-        <div data-role="footer" data-position="fixed">
-            <h4>2016 &copy; Pekka Pekkonen</h4>
-        </div>
+        <?php include('footer.html'); ?>
 
     </div><!-- Settings page ends -->
 
