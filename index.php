@@ -45,15 +45,10 @@
 
         <!-- header -->
         <div data-role="header">
-            <div data-role="navbar">
-                <ul>
-                    <li><a href="#languages-page">Logo</a></li>
-                </ul>
-                <h1>Settings</h1>
-            </div>
+            <a href="#languages-page" data-icon="home">Menu</a>
+            <h1>Language learner - Settings</h1>
+            <a href="logout.php" data-icon="power" class="ui-btn-right">Logout <?php echo $_SESSION['loggedInUser']; ?></a>
         </div>
-
-        <?php include('user_section.php'); ?>
 
         <!-- content -->
         <div data-role="content">
