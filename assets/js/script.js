@@ -117,26 +117,14 @@ function changeStatistics() {
     }
 }
 
-/*$(document).on("pagecreate", function () { */
-
-    $(window).on("orientationchange", function () {
-        console.log(window.orientation);
-        if(window.orientation === 0) {
-            if ($.mobile.activePage.attr('id') != 'question') {
-                $.mobile.changePage("#question", {transition: "slideup"});
-            }
-        } else {
-            if ($.mobile.activePage.attr('id') != 'statistics') {
-                showStatistics();
-                $.mobile.changePage("#statistics", {transition: "slideup"});
-            }
-        }
-    });
-
-/*
+$(window).on("orientationchange", function (e) {
+    if(e.orientation === 'portrait') {
+            $.mobile.changePage("#question", {transition: "slideup"});
+    } else {
+            showStatistics();
+            $.mobile.changePage("#statistics", {transition: "slideup"});
+    }
 });
-*/
-
 
 
 function showStatistics() {
