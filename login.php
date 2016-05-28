@@ -25,6 +25,11 @@
     <!--            -->
     <div data-role="page" id="login-page">
 
+        <!-- header -->
+        <div data-role="header">
+            <h1>Language Learner</h1>
+        </div>
+
         <!-- content -->
         <div data-role="content">
 
