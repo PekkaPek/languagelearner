@@ -35,7 +35,7 @@
 
         <!-- footer -->
         <div data-role="footer" data-position="fixed">
-            <h4>2016 &copy Pekka Pekkonen</h4>
+            <h4>2016 &copy; Pekka Pekkonen</h4>
         </div>
     </div> <!-- Languages page ends -->
 
@@ -68,7 +68,7 @@
 
         <!-- footer -->
         <div data-role="footer" data-position="fixed">
-            <h4>2016 &copy Pekka Pekkonen</h4>
+            <h4>2016 &copy; Pekka Pekkonen</h4>
         </div>
 
     </div><!-- Settings page ends -->
