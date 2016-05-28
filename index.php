@@ -13,8 +13,8 @@
 </head>
 <body>
 
-    <!--- Index page -->
-    <!---            -->
+    <!--- Languages page -->
+    <!---                -->
     <div data-role="page" id="languages-page">
 
         <!-- header -->
@@ -37,7 +37,7 @@
         <div data-role="footer" data-position="fixed">
             testfooter
         </div>
-    </div> <!-- Index page ends -->
+    </div> <!-- Languages page ends -->
 
     <!-- Settings page -->
     <!--               -->
