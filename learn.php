@@ -56,7 +56,8 @@ include('check_session.php');
         </div>
 
         <!-- Footer -->
-        <div data-role="footer">
+        <div data-role="footer" data-position="fixed">
+            <h4>2016 &copy Pekka Pekkonen</h4>
         </div>
     </div>
 
