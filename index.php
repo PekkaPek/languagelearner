@@ -13,14 +13,13 @@
 </head>
 <body>
     <div data-role="page" id="languages-page">
+
         <div data-role="header">
-            <div data-role="navbar">
-                <ul>
-                    <li><a href="#settings-page" data-icon="gear"></a></li>
-                </ul>
-            </div>
-            <?php include('user_section.php'); ?>
+            <a href="#settings-page" data-icon="gear">Settings</a>
+            <h1>Language learner</h1>
+            <a href="logout.php" data-icon="power" class="ui-btn-right">Logout <?php echo $_SESSION['loggedInUser']; ?></a>
         </div>
+
         <div data-role="content">
             <?php include('messages.php'); ?>
             <h2>Start learning a language</h2>

@@ -17,33 +17,46 @@ include('check_session.php');
 
 <body>
     <div data-role="page" id="question">
-        <?php include('user_section.php'); ?>
-        <?php include_once('printRandomPicture.php')?>
 
-        <form>
-            What is this?
-            <input type="text" name="answer" id="answer-txt">
-            <input type="submit" value="Answer" id="answer_btn">
-        </form>
-
-        <!-- Wrong answers-->
-        <div id="wrong-answer-first-time">
-            Wrong answer.<br><br>
-            Try once more.
+        <!-- Header -->
+        <div data-role="header">
+            <a href="index.php" data-icon="home">Menu</a>
+            <h1>Language learner</h1>
+            <a href="logout.php" data-icon="power" class="ui-btn-right">Logout</a>
         </div>
 
-        <div id="wrong-answer-second-time">
-            Wrong answer<br><br>
-            Right answer: <?php echo $_SESSION['name']; ?><br><br>
-            Next question<br>
-            <progress value="0" max="100" class="counter"></progress>
+        <!-- Content -->
+        <div data-role="content">
+            <?php include_once('printRandomPicture.php')?>
+            <form>
+                What is this?
+                <input type="text" name="answer" id="answer-txt">
+                <input type="submit" value="Answer" id="answer_btn">
+            </form>
+
+            <!-- Wrong answers-->
+            <div id="wrong-answer-first-time">
+                Wrong answer.<br><br>
+                Try once more.
+            </div>
+
+            <div id="wrong-answer-second-time">
+                Wrong answer<br><br>
+                Right answer: <?php echo $_SESSION['name']; ?><br><br>
+                Next question<br>
+                <progress value="0" max="100" class="counter"></progress>
+            </div>
+
+            <!-- Right answer -->
+            <div id="right-answer">
+                Right answer: <?php echo $_SESSION['name']; ?><br><br>
+                Next question<br>
+                <progress value="0" max="100" class="counter"></progress>
+            </div>
         </div>
 
-        <!-- Right answer -->
-        <div id="right-answer">
-            Right answer: <?php echo $_SESSION['name']; ?><br><br>
-            Next question<br>
-            <progress value="0" max="100" class="counter"></progress>
+        <!-- Footer -->
+        <div data-role="footer">
         </div>
     </div>
 
