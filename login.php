@@ -58,7 +58,7 @@
 
         </div>
         <div data-role="footer" data-position="fixed">
-            testfooter
+            <h4>2016 &copy Pekka Pekkonen</h4>
         </div>
     </div>
 
