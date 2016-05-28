@@ -121,17 +121,37 @@ $(window).on("orientationchange", function (e) {
     if(e.orientation === 'portrait') {
             $.mobile.changePage("#question", {transition: "slideup"});
     } else {
-            showStatistics();
+            showQuestionStatistics();
+            getUserName();
+            getUserId();
             $.mobile.changePage("#statistics", {transition: "slideup"});
     }
 });
 
 
-function showStatistics() {
+function showQuestionStatistics() {
     $.ajax( {
        url: 'statistics.php',
         success: function (statistics) {
             $('#statistics-box').html(statistics);
+        }
+    });
+}
+
+function getUserName() {
+    $.ajax( {
+       url: 'get_loggedInUser.php',
+        success: function (name) {
+            $('#username-position').html(name);
+        }
+    });
+}
+
+function getUserId() {
+    $.ajax({
+        url: 'get_loggedInId.php',
+        success: function (id) {
+            $('#id-position').html(id);
         }
     });
 }
