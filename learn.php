@@ -70,12 +70,8 @@ include('check_session.php');
 
     <div data-role="page" id="statistics-user">
         <div data-role="content">
-            Your login name is
-            <div id="statistics-box">
-            </div>
-            Your id is
-            <div class="statistics-box--id">
-            </div>
+            <div class="big-text">Your login name is <b><span id="username-position"></span></b></div>
+            <div class="big-text">Your id is <b><span id="id-position"></span></b></div>
         </div>
     </div>
 
