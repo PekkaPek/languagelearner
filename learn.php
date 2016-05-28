@@ -22,7 +22,7 @@ include('check_session.php');
         <div data-role="header">
             <a href="index.php" data-icon="home">Menu</a>
             <h1>Language learner</h1>
-            <a href="logout.php" data-icon="power" class="ui-btn-right">Logout</a>
+            <a href="logout.php" data-icon="power" class="ui-btn-right">Logout <?php echo $_SESSION['loggedInUser']; ?></a>
         </div>
 
         <!-- Content -->
@@ -57,14 +57,14 @@ include('check_session.php');
 
         <!-- Footer -->
         <?php include('footer.html'); ?>
-        
+
     </div>
 
     <div data-role="page" id="statistics">
         <div data-role="content">
             Right answers / Total questions
-            <div id="statistics-box">
-            </div>
+            <div id="statistics-box"></div>
+            <br><br>Swipe to see user info
         </div>
     </div>
 
