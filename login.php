@@ -21,7 +21,11 @@
 </head>
 
 <body>
+    <!-- Login page -->
+    <!--            -->
     <div data-role="page" id="login-page">
+
+        <!-- content -->
         <div data-role="content">
 
             <h1>Login</h1>
@@ -57,6 +61,8 @@
             </div>
 
         </div>
+
+        <!-- footer -->
         <div data-role="footer" data-position="fixed">
             <h4>2016 &copy Pekka Pekkonen</h4>
         </div>
