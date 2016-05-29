@@ -4,6 +4,14 @@ This is a flashcard style learning web application. It is made for a school proj
 
 User is supposed to add their own question pictures. There are three example pictures in the repository under assets/pictures folder. They are added to database in the creation script provided in this repository.
 
+### Used techniques
+* HTML
+* CSS
+* jQuery
+* jQuery Mobile
+* PHP
+* SQL (MySQL)
+
 ## Steps to set up this repository
 
 1. Make sure that you have WAMP, MAMP or equivalent installed.
