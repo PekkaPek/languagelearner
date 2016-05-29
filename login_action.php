@@ -34,16 +34,16 @@ if ( mysqli_num_rows($result) > 0) {
             session_start();
             $_SESSION['loggedInUser'] = $user;
             $_SESSION['id'] = $id;
-            mysqli_close();
+            mysqli_close($conn);
             echo 'login successful';
         // pw is not right
         } else {
-            mysqli_close();
+            mysqli_close($conn);
             echo 'false';
         }
 
     // username is not right
 } else {
-    mysqli_close();
+    mysqli_close($conn);
     echo 'false';
 }
