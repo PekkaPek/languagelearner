@@ -6,7 +6,7 @@
  * Time: 12:11
  */
 
-if($isset($_GET['status'])) {
+if(isset($_GET['status'])) {
     $status = $_GET['status'];
     if ($status == 3): ?>
         <div>
