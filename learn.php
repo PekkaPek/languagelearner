@@ -15,7 +15,7 @@ include('check_session.php');
     <script src="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
     <script src="assets/js/index_script.js"></script>
     <script src="assets/js/script.js"></script>
-    <script src="assets/js/LoginScript.js"></script>
+    <script src="assets/js/loginScript.js"></script>
 </head>
 
 <body>
@@ -62,7 +62,7 @@ include('check_session.php');
         <?php include('footer.html'); ?>
         <script src="assets/js/index_script.js"></script>
         <script src="assets/js/script.js"></script>
-        <script src="assets/js/LoginScript.js"></script>
+        <script src="assets/js/loginScript.js"></script>
     </div>
 
     <div data-role="page" id="statistics">
@@ -73,7 +73,7 @@ include('check_session.php');
         </div>
         <script src="assets/js/index_script.js"></script>
         <script src="assets/js/script.js"></script>
-        <script src="assets/js/LoginScript.js"></script>
+        <script src="assets/js/loginScript.js"></script>
     </div>
 
     <div data-role="page" id="statistics-user">
@@ -83,7 +83,7 @@ include('check_session.php');
         </div>
         <script src="assets/js/index_script.js"></script>
         <script src="assets/js/script.js"></script>
-        <script src="assets/js/LoginScript.js"></script>
+        <script src="assets/js/loginScript.js"></script>
     </div>
 
     <script src="assets/js/script.js"></script>
