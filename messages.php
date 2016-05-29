@@ -6,13 +6,17 @@
  * Time: 12:11
  */
 
-$status = $_GET['status'];
-if ($status == 3): ?>
-    <div>
-        Setting have been saved.
-    </div>
-<?php elseif($status == 4): ?>
-    <div>
-        Setting not saved.
-    </div>
-<?php endif; ?>
+if($isset($_GET['status'])) {
+    $status = $_GET['status'];
+    if ($status == 3): ?>
+        <div>
+            Setting have been saved.
+        </div>
+    <?php elseif($status == 4): ?>
+        <div>
+            Setting not saved.
+        </div>
+    <?php endif;
+}
+?>
+
