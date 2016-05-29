@@ -18,6 +18,9 @@
     <link rel="stylesheet" href="./assets/css/styles.css">
     <script src="http://code.jquery.com/jquery-1.11.1.min.js"></script>
     <script src="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
+    <script src="assets/js/index_script.js"></script>
+    <script src="assets/js/script.js"></script>
+    <script src="assets/js/LoginScript.js"></script>
 </head>
 
 <body>
@@ -69,7 +72,9 @@
 
         <!-- footer -->
         <?php include('footer.html'); ?>
-        
+        <script src="assets/js/index_script.js"></script>
+        <script src="assets/js/script.js"></script>
+        <script src="assets/js/LoginScript.js"></script>
     </div>
 
     <script src="assets/js/loginScript.js"></script>
