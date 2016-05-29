@@ -20,4 +20,4 @@ User is supposed to add their own question pictures. There are three example pic
 4. Create a user to your database. The application uses this user for the database access. Use the following configurations to create a new user:
   * Username: usramazeme
   * Password: Am@Z3mE
-5. To test the application, navigate to it with web browser.
+5. To test the application, open it with web browser.
