@@ -8,12 +8,11 @@ User is supposed to add their own question pictures. There are three example pic
 * Web server (e.g. Apache or Nginx)
 * MySQL Database
 
-## Setting Up
+## Set Up
 
-1. Make sure you have a DBMS that supports MySQL commands.
-2. Clone this repository to your working directory (e.g in WAMP _www_ folder).
-3. Import newly created __languageLearner/db/db_create.sql__ file to your DBMS. This will create the database and tables that is needed to run this application correctly.
-4. Create a user to your database. The application uses this user for the database access. Use the following configurations to create a new user:
+1. Clone this repository to your Web server.
+2. Import __languageLearner/db/db_create.sql__ file to mobileweb-amazeme database.
+3. Create a database user. The application uses this user for the database access.
   * Username: usramazeme
   * Password: Am@Z3mE
-5. To test the application, open it with web browser.
+4. To test the application, open it with web browser.
