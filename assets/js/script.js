@@ -135,6 +135,7 @@ $(document).on('pagecreate', function () {
     }
     
     function resetCounterBar() {
+        nextQuestionProgressBarPercentage = 0;
         $('.counter').val(0);
     }
 
