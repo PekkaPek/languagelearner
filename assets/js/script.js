@@ -174,12 +174,17 @@ $(document).on('pagecreate', function () {
         }
     } */
 
+    $("#statistics").on("swipe", changeStatistics);
+    $("#statistics-user").on("swipe", changeStatistics);
+
+
 
 
 });
 
-$("#statistics").on("swipe", changeStatistics);
-$("#statistics-user").on("swipe", changeStatistics);
+$(document).on("taphold", '.question-img', function () {
+    $(this).hide(1000).show(1000);
+});
 
 function changeStatistics() {
     console.log('Swipe detected');
@@ -203,9 +208,9 @@ $(window).on("orientationchange", function (e) {
     }
 });
 
-$('.question-img').on("taphold", function () {
-    $(this).hide(1000).show(1000);
-});
+
+
+
 
 
 function showQuestionStatistics() {
