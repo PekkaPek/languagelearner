@@ -12,7 +12,7 @@ The user can add their own question pictures and picture answers. There are thre
 
 1. Clone this repository to your Web server.
 2. Import _languageLearner/db/db_create.sql_ to MySQL. This will create database and tables.
-3. Create a database user to __mobileweb-amazeme_ database. The application uses this user for the database access.
+3. Create a database user to __mobileweb-amazeme__ database. The application uses this user for the database access.
   * Username: usramazeme
   * Password: Am@Z3mE
 4. To test the application, open it with web browser.
