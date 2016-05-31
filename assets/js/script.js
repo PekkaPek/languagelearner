@@ -1,7 +1,7 @@
 /**
  * Created by pekka on 11/05/16.
  */
-$(document).on('pageinit', function () {
+$(document).on('pagecreate', function () {
 
     var usernameInput;
     var passwordInput;
@@ -19,7 +19,7 @@ $(document).on('pageinit', function () {
                 console.log(login_successful);
                 if(login_successful === 'login successful') {
                     $('#login-error').show().hide();
-                    window.location.replace('index.php');
+                    $.mobile.changePage("index.php", {transition: "slideup"});
                 } else {
                     $('#login-error').show();
                 }
@@ -29,8 +29,6 @@ $(document).on('pageinit', function () {
 
     $('#new-account-btn').click(function (e) {
         e.preventDefault();
-        console.log($('#new-username').val());
-        console.log($('#new-password').val());
         $.ajax( {
             url: 'new_account.php',
             type: 'POST',
@@ -53,9 +51,9 @@ $(document).on('pageinit', function () {
             type: 'post',
             data: { seconds_between_images: seconds_between_images, audio_setting: audio_setting},
             success: function () {
+                $.mobile.changePage("#languages-page", {transition: "slideup"});
             }
         });
-        window.location = 'index.php?status=3';
     });
 
     var nextQuestionProgressBarPercentage = 0;
@@ -65,7 +63,7 @@ $(document).on('pageinit', function () {
     var audioElement = document.createElement('audio');
     audioElement.setAttribute('src', 'assets/audio/twang.mp3');
 
-    $("#answer_btn").click(function (e) {
+    $(document).on('click', "#answer-btn", function (e) {
         // prevent submitting the form
         e.preventDefault();
         // check user's answer using ajax
@@ -83,7 +81,8 @@ $(document).on('pageinit', function () {
                         addOneToTries();
                         addOneToCorrectAnswers();
                         // start progress bar
-                        setInterval(incrementCounterBarByOne, 40);
+                        resetCounterBar();
+                        setTimeout(setInterval(incrementCounterBarByOne, 40), 400);
                         // change to next question
                         changeToNextQuestion();
                         /*** Wrong answer first time ***/
@@ -101,6 +100,7 @@ $(document).on('pageinit', function () {
                         addOneToTries();
                         // start progress bar
                         timeBetweenImages = getTimeBetweenImages();
+                        resetCounterBar();
                         setInterval(incrementCounterBarByOne, 40);
                         // change to next question
                         changeToNextQuestion();
@@ -133,10 +133,23 @@ $(document).on('pageinit', function () {
           $('.counter').val( nextQuestionProgressBarPercentage );
         }
     }
+    
+    function resetCounterBar() {
+        $('.counter').val(0);
+    }
 
     function changeToNextQuestion() {
         setTimeout( function () {
-            window.location.replace(window.location.href);
+            $.ajax( {
+               url: 'printRandomPicture.php',
+                success: function (picture_element) {
+                    console.log('putting before: ' + picture_element);
+                    $('#question-img-container').html(picture_element);
+                    $('html, body').animate({ scrollTop: 0 }, 0);
+                    $('#answer-txt').val('');
+                }
+            });
+
         }, 4000);
     }
 
