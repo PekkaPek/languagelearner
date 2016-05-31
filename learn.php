@@ -21,11 +21,11 @@ include('check_session.php');
 
         <!-- Content -->
         <div data-role="content">
-            <?php include_once('printRandomPicture.php')?>
-            <form>
+            <span id="question-img-container"><?php include_once('printRandomPicture.php')?></span>
+            <form id="answer-form">
                 What is this?
                 <input type="text" name="answer" id="answer-txt">
-                <input type="submit" value="Answer" id="answer_btn">
+                <input type="submit" value="Answer" id="answer-btn">
             </form>
 
             <!-- Wrong answers-->
