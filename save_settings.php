@@ -19,5 +19,5 @@ if ($audio_setting === 'on') {
 
 /*** Setting updates ***/
 include_once('connection.php');
-$sql = "UPDATE `language_learner`.`settings` SET `time_between_images` = {$seconds_between_images},`play_audio_example` = b'{$audio_setting_bit}' WHERE `settings`.`user_id` = {$_SESSION['id']}";
+$sql = "UPDATE `settings` SET `time_between_images` = {$seconds_between_images},`play_audio_example` = b'{$audio_setting_bit}' WHERE `settings`.`user_id` = {$_SESSION['id']}";
 mysqli_query($conn, $sql);
