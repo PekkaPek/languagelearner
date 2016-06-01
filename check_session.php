@@ -1,6 +1,6 @@
 <?php
 if (session_status() === PHP_SESSION_NONE){session_start();}
-if(!$_SESSION['loggedInUser']) {
+if(!isset($_SESSION['loggedInUser']) && empty($_SESSION['loggedInUser'])) {
     header('Location: login.php');
     die();
 }
