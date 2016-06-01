@@ -52,7 +52,7 @@ $(document).on('pagecreate', function () {
             type: 'post',
             data: { seconds_between_images: seconds_between_images, audio_setting: audio_setting},
             success: function () {
-                $.mobile.changePage("#languages-page", {transition: "slideup"});
+                $.mobile.changePage("index.php", {transition: "slideup"});
             }
         });
     });
