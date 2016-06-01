@@ -173,20 +173,7 @@ $(document).on('pagecreate', function () {
             }
         });
     }
-
-    /*$("#statistics").on("swipe", changeStatistics);
-    $("#statistics-user").on("swipe", changeStatistics);
-
-    function changeStatistics() {
-        if ($.mobile.activePage.attr('id') == 'statistics') {
-            $.mobile.changePage("#statistics-user", {transition: "slideup"});
-        } else {
-            $.mobile.changePage("#statistics", {transition: "slideup"});
-        }
-    } */
-
-
-
+    
 });
 
 $(document).off("swipe", "#statistics").on("swipe", "#statistics", changeStatistics);
