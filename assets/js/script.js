@@ -63,7 +63,8 @@ $(document).on('pagecreate', function () {
     var audioElement = document.createElement('audio');
     audioElement.setAttribute('src', 'assets/audio/twang.mp3');
 
-    $(document).on('click', "#answer-btn", function (e) {
+    $(document).off('click', '#answer-btn').on('click', "#answer-btn", function (e) {
+        console.log('suorituksessa');
         // prevent submitting the form
         e.preventDefault();
         // check user's answer using ajax
@@ -75,6 +76,7 @@ $(document).on('pagecreate', function () {
                     if (right_answer == $('#answer-txt').val()) {
                         audioElement.play();
                         // frontend changes
+                        printAnswer();
                         $("#wrong-answer-first-time").show().hide();
                         $('#right-answer').show();
                         // backend change
@@ -94,6 +96,7 @@ $(document).on('pagecreate', function () {
                         /*** Wrong answer second time ***/
                     } else {
                         // frontend changes
+                        printAnswer();
                         $('#wrong-answer-first-time').hide();
                         $('#wrong-answer-second-time').show();
                         // backend change
@@ -163,6 +166,16 @@ $(document).on('pagecreate', function () {
             });
     }
 
+    function printAnswer() {
+        $.ajax( {
+           url: 'get_answer.php',
+            success: function (answer) {
+                console.log(answer);
+                  $('.answer').html(answer);
+            }
+        });
+    }
+
     /*$("#statistics").on("swipe", changeStatistics);
     $("#statistics-user").on("swipe", changeStatistics);
 
@@ -177,13 +190,12 @@ $(document).on('pagecreate', function () {
         }
     } */
 
-    $("#statistics").on("swipe", changeStatistics);
-    $("#statistics-user").on("swipe", changeStatistics);
-
-
 
 
 });
+
+$(document).off("swipe", "#statistics").on("swipe", "#statistics", changeStatistics);
+$(document).off("swipe", "#statistics-user").on("swipe", "#statistics-user" ,changeStatistics);
 
 $(document).on("taphold", '.question-img', function () {
     $(this).hide(1000).show(1000);
