@@ -33,9 +33,11 @@ CREATE TABLE `question` (
 --
 
 INSERT INTO `question` (`word_id`, `picture_link`, `english`) VALUES
-  (1, './assets/images/bicycle.jpg', 'bicycle'),
+  (1, './assets/images/apple.png', 'apple'),
   (2, './assets/images/car.png', 'car'),
-  (3, './assets/images/apple-logo.png', 'apple');
+  (3, './assets/images/pen.png', 'pen'),
+  (4, './assets/images/squirrel.png', 'squirrel'),
+  (5, './assets/images/three.png', 'three');
 
 -- --------------------------------------------------------
 
