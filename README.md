@@ -16,3 +16,8 @@ The user can add their own question pictures and picture answers. There are thre
   * Username: usramazeme
   * Password: Am@Z3mE
 4. To test the application, open it with web browser.
+
+
+#### Note
+The application is under development.
+Some bugs are known and some features are not fully implemented.
