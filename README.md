@@ -2,7 +2,7 @@
 
 This is a flashcard style learning web application. The main target is mobile devices.
 
-The user can add their own question pictures and picture answers. There are three example pictures. They are added to the database automatically.
+The user can add their own question pictures and picture answers. There are five example pictures. They are added to the database automatically.
 
 ### Requirements
 * Web server (e.g. Apache or Nginx)
