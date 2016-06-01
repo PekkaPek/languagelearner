@@ -9,14 +9,12 @@ $(document).on('pagecreate', function () {
     $('#login-btn').click(function (e) {
         e.preventDefault();
         usernameInput = $('#login-username').val();
-        console.log('Login script says: ' + usernameInput);
         passwordInput = $('#login-password').val();
         $.ajax( {
             url: 'login_action.php',
             type: 'POST',
             data: { username: usernameInput, password:  passwordInput },
             success: function (login_successful) {
-                console.log(login_successful);
                 if(login_successful === 'login successful') {
                     $('#login-error').show().hide();
                     $.mobile.changePage("index.php", {transition: "slideup"});
@@ -65,7 +63,6 @@ $(document).on('pagecreate', function () {
     audioElement.setAttribute('src', 'assets/audio/twang.mp3');
 
     $(document).off('click', '#answer-btn').on('click', "#answer-btn", function (e) {
-        console.log('suorituksessa');
         // prevent submitting the form
         e.preventDefault();
         // check user's answer using ajax
@@ -150,7 +147,6 @@ $(document).on('pagecreate', function () {
             $.ajax( {
                url: 'printRandomPicture.php',
                 success: function (picture_element) {
-                    console.log('putting before: ' + picture_element);
                     $('#question-img-container').html(picture_element);
                     $('html, body').animate({ scrollTop: 0 }, 0);
                     $('#answer-txt').val('');
@@ -173,7 +169,6 @@ $(document).on('pagecreate', function () {
         $.ajax( {
            url: 'get_answer.php',
             success: function (answer) {
-                console.log(answer);
                   $('.answer').html(answer);
             }
         });
@@ -183,12 +178,9 @@ $(document).on('pagecreate', function () {
     $("#statistics-user").on("swipe", changeStatistics);
 
     function changeStatistics() {
-        console.log('Swipe detected');
         if ($.mobile.activePage.attr('id') == 'statistics') {
-            console.log("changing to statistics-user page");
             $.mobile.changePage("#statistics-user", {transition: "slideup"});
         } else {
-            console.log("changing to statistics page");
             $.mobile.changePage("#statistics", {transition: "slideup"});
         }
     } */
@@ -205,12 +197,9 @@ $(document).on("taphold", '.question-img', function () {
 });
 
 function changeStatistics() {
-    console.log('Swipe detected');
     if ($.mobile.activePage.attr('id') == 'statistics') {
-        console.log("changing to statistics-user page");
         $.mobile.changePage("#statistics-user", {transition: "slideup"});
     } else {
-        console.log("changing to statistics page");
         $.mobile.changePage("#statistics", {transition: "slideup"});
     }
 }
