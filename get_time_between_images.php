@@ -5,7 +5,7 @@
  * Date: 23/05/16
  * Time: 13:09
  */
-session_start();
+if (session_status() === PHP_SESSION_NONE){session_start();}
 include_once('connection.php');
 $sql = "SELECT time_between_images FROM `settings` WHERE `user_id` = {$_SESSION['id']}";
 $result = mysqli_query($conn, $sql);

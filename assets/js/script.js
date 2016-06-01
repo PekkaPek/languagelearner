@@ -148,6 +148,9 @@ $(document).on('pagecreate', function () {
                     $('#question-img-container').html(picture_element);
                     $('html, body').animate({ scrollTop: 0 }, 0);
                     $('#answer-txt').val('');
+                    answerTimes = 0;
+                    $("#wrong-answer-second-time").hide();
+                    $("#right-answer").hide();
                 }
             });
 

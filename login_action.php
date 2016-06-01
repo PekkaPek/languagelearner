@@ -31,7 +31,7 @@ if ( mysqli_num_rows($result) > 0) {
         /*** check if password is right ***/
         // pw is right
         if (password_verify($form_password, $hashedPassword)) {
-            session_start();
+            if (session_status() === PHP_SESSION_NONE){session_start();}
             $_SESSION['loggedInUser'] = $user;
             $_SESSION['id'] = $id;
             mysqli_close($conn);

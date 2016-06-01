@@ -6,7 +6,7 @@
  * Time: 13:15
  */
 
-session_start();
+if (session_status() === PHP_SESSION_NONE){session_start();}
 
 include_once('connection.php');
 $query = "SELECT `tries`, `tries_right` FROM `user` WHERE `id` = {$_SESSION['id']}";

@@ -6,7 +6,7 @@
  * Time: 11:18
  */
 
-session_start();
+if (session_status() === PHP_SESSION_NONE){session_start();}
 
 /*** Handling POST parameters ***/
 $seconds_between_images = $_POST['seconds_between_images'];

@@ -6,7 +6,7 @@
  * Time: 09:42
  */
 
-session_start();
+if (session_status() === PHP_SESSION_NONE){session_start();}
 
 include_once('connection.php');
 $sql = "SELECT `play_audio_example` FROM `settings` WHERE `user_id` = {$_SESSION['id']}";
