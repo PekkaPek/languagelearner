@@ -35,6 +35,7 @@ $(document).on('pagecreate', function () {
             data: { newUsername: $('#new-username').val(), newPassword: $('#new-password').val() },
             success: function () {
                 $('#sign-in').popup('close');
+                $('#login-error').hide();
                 $('#account-created').show();
             }
         });
