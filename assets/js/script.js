@@ -73,6 +73,8 @@ $(document).on('pagecreate', function () {
             url: 'check_answer.php',
             success: function(right_answer) {
                 timeBetweenImages.done( function () {
+                    // Remove active active state of btn
+                    $("#answer-btn").parent().removeClass('ui-btn-active');
                     /*** Right answer ***/
                     if (right_answer == $('#answer-txt').val()) {
                         audioElement.play();
