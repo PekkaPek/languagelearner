@@ -36,14 +36,14 @@ include('check_session.php');
 
             <div id="wrong-answer-second-time">
                 Wrong answer<br><br>
-                Right answer: <?php echo $_SESSION['name']; ?><br><br>
+                Right answer: <span class="answer"></span><br><br>
                 Next question<br>
                 <progress value="0" max="100" class="counter"></progress>
             </div>
 
             <!-- Right answer -->
             <div id="right-answer">
-                Right answer: <?php echo $_SESSION['name']; ?><br><br>
+                Right answer: <span class="answer"></span><br><br>
                 Next question<br>
                 <progress value="0" max="100" class="counter"></progress>
             </div>
