@@ -14,9 +14,9 @@ include('check_session.php');
 
         <!-- Header -->
         <div data-role="header">
-            <a href="index.php" data-icon="home">Menu</a>
+            <a href="index.php" class="ui-btn ui-corner-all ui-btn-icon-home">Menu</a>
             <h1>Language learner</h1>
-            <a href="logout.php" data-icon="power" class="ui-btn-right">Logout <?php echo $_SESSION['loggedInUser']; ?></a>
+            <a href="logout.php" class="ui-btn ui-corner-all">Log out</a>
         </div>
 
         <!-- Content -->

@@ -13,9 +13,9 @@
 
         <!-- header -->
         <div data-role="header">
-            <a href="settings.php" data-icon="gear">Settings</a>
+            <a href="settings.php" class="ui-btn ui-shadow ui-corner-all ui-icon-gear ui-btn-icon-notext">Keijo</a>
             <h1>Language learner</h1>
-            <a href="logout.php" data-icon="power" class="ui-btn-right">Logout <?php echo $_SESSION['loggedInUser']; ?></a>
+            <a href="logout.php" class="ui-btn">Log out</a>
         </div>
 
         <!-- content -->
