@@ -19,6 +19,7 @@ $(document).on('pagecreate', function () {
                     $('#login-error').show().hide();
                     $.mobile.changePage("index.php", {transition: "slideup"});
                 } else {
+                    $('#account-created').hide();
                     $('#login-error').show();
                 }
             }
